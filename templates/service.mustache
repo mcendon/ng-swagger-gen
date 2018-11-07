@@ -9,9 +9,7 @@ import { map as __map, filter as __filter } from 'rxjs/operators';
 
 {{#serviceDependencies}}import { {{modelClass}} } from '../models/{{modelFile}}';
 {{/serviceDependencies}}
-{{{serviceComments}}}@Injectable({
-  providedIn: 'root',
-})
+{{{serviceComments}}}@Injectable()
 class {{serviceClass}} extends BaseService {
   constructor(
     config: {{ configurationClass }},
